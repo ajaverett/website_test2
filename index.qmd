@@ -50,7 +50,7 @@ format:
               id: 0,
               title: "Booz Allen Hamilton",
               description: `
-                <strong>Role:</strong>Senior Consultant and Data Engineer<br><br>
+                <strong>Role:</strong> Senior Consultant and Data Engineer<br><br>
                 <strong>Client:</strong> CVN Readiness Operations Center (Naval Air Force Atlantic)<br><br>
                 I architect mission-critical data infrastructure used to assess warfighting readiness across the entire fleet of Aircraft Carriers. My role bridges complex data engineering with high-level decision support.<br><br>
                 <strong>Engineering & Architecture:</strong><br>
@@ -189,7 +189,7 @@ format:
                 </div>
               `
             },
-            {
+                        {
               id: 2,
               title: "WPA Intelligence",
               description: `
@@ -204,90 +204,83 @@ format:
                 <div class="mt-6">
                     <img src="images/wpai.png" alt="WPA Intelligence logo" class="w-full h-auto rounded-xl" />
                 </div>
-
               `,
               badgeText: "JUL 2022 - NOV 2022",
               visualHTML: `
-                <div class="relative w-full h-full flex items-center justify-center">
+                <div class="w-full max-w-md bg-slate-900 rounded-xl overflow-hidden border border-slate-700 shadow-2xl relative group">
                     
-                    <!-- 1. The Glowing Connections (SVG Lines) -->
-                    <!-- We use an SVG to draw the lines connecting the nodes behind them -->
-                    <svg class="absolute inset-0 w-full h-full pointer-events-none z-0">
-                        <defs>
-                            <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" stop-color="rgba(245, 158, 11, 0)" />
-                                <stop offset="50%" stop-color="rgba(245, 158, 11, 0.4)" />
-                                <stop offset="100%" stop-color="rgba(245, 158, 11, 0)" />
-                            </linearGradient>
-                        </defs>
-                        <!-- Lines connecting Central Node to Satellites -->
-                        <line x1="50%" y1="50%" x2="20%" y2="30%" stroke="url(#lineGradient)" stroke-width="2" class="animate-pulse" />
-                        <line x1="50%" y1="50%" x2="80%" y2="25%" stroke="url(#lineGradient)" stroke-width="1" class="animate-pulse" style="animation-delay: 0.5s" />
-                        <line x1="50%" y1="50%" x2="25%" y2="75%" stroke="url(#lineGradient)" stroke-width="1" class="animate-pulse" style="animation-delay: 1s" />
-                        <line x1="50%" y1="50%" x2="75%" y2="70%" stroke="url(#lineGradient)" stroke-width="2" class="animate-pulse" style="animation-delay: 1.5s" />
-                        <!-- Connections between satellites -->
-                        <line x1="20%" y1="30%" x2="80%" y2="25%" stroke="rgba(245, 158, 11, 0.1)" stroke-width="1" stroke-dasharray="4 4" />
-                    </svg>
-
-                    <!-- 2. The Central Core (The Model) -->
-                    <div class="relative z-10">
-                        <div class="absolute -inset-8 bg-amber-500/20 rounded-full blur-[40px] animate-pulse"></div>
-                        <div class="w-24 h-24 bg-slate-900/80 backdrop-blur-xl rounded-full border border-amber-500/50 flex items-center justify-center shadow-[0_0_30px_rgba(245,158,11,0.3)] relative group cursor-pointer">
-                            <div class="text-center">
-                                <div class="text-xs text-amber-500 font-mono">ACCURACY</div>
-                                <div class="text-2xl font-bold text-white group-hover:text-amber-300 transition-colors">94%</div>
-                            </div>
-                            <!-- Orbiting Ring around core -->
-                            <div class="absolute inset-0 border border-amber-500/30 rounded-full animate-[spin_10s_linear_infinite] border-t-transparent border-l-transparent"></div>
+                    <!-- 1. The "News" Header -->
+                    <div class="bg-purple-700 px-4 py-2 flex justify-between items-center shadow-lg relative z-20">
+                        <div class="flex items-center gap-2">
+                            <span class="animate-pulse w-2 h-2 bg-white rounded-full"></span>
+                            <span class="text-white font-bold tracking-widest text-xs font-mono">LIVE </span>
                         </div>
+                        <span class="text-white/80 text-[10px] font-mono">PRECINCTS: 98%</span>
                     </div>
 
-                    <!-- 3. Floating Nodes (Satellites) -->
-                    
-                    <!-- Node 1: Top Left (Voter History) -->
-                    <div class="absolute top-[20%] left-[15%] z-10 animate-[bounce_4s_infinite]">
-                        <div class="relative group">
-                            <div class="w-3 h-3 bg-amber-500 rounded-full shadow-[0_0_15px_#f59e0b]"></div>
-                            <!-- Hover Label -->
-                            <div class="absolute left-6 top-1/2 -translate-y-1/2 bg-slate-800/90 px-3 py-1 rounded border border-amber-500/20 whitespace-nowrap backdrop-blur-md">
-                                <span class="text-[10px] text-amber-400 font-mono block">VARIABLE_01</span>
-                                <span class="text-xs text-white font-bold">Voter History</span>
+                    <!-- 2. The Main Dashboard Content -->
+                    <div class="p-6 relative bg-gradient-to-b from-slate-900 to-slate-950">
+                        
+                        <!-- The Scoreboard -->
+                        <div class="flex justify-between items-end mb-6 border-b border-white/10 pb-4">
+                            <!-- Purple (Winner) Side -->
+                            <div class="text-left">
+                                <div class="text-xs text-purple-400 font-mono mb-1">OUR CLIENT</div>
+                                <div class="text-4xl font-black text-white leading-none">54.2<span class="text-lg text-slate-500">%</span></div>
+                                <div class="text-xs text-purple-500 font-bold mt-1">+8.4 PTS</div>
+                            </div>
+                            
+                            <!-- VS -->
+                            <div class="pb-2 text-slate-600 text-xs font-mono">VS</div>
+
+                            <!-- Yellow (Loser) Side -->
+                            <div class="text-right opacity-80">
+                                <div class="text-xs text-yellow-500/80 font-mono mb-1">OPPONENT</div>
+                                <div class="text-3xl font-bold text-slate-300 leading-none">45.8<span class="text-sm">%</span></div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Node 2: Top Right (Demographics) -->
-                    <div class="absolute top-[15%] right-[15%] z-10 animate-[bounce_5s_infinite]" style="animation-delay: 1s;">
-                        <div class="relative group">
-                             <div class="w-4 h-4 bg-amber-600 rounded-full shadow-[0_0_15px_#d97706]"></div>
-                             <div class="absolute right-6 top-1/2 -translate-y-1/2 bg-slate-800/90 px-3 py-1 rounded border border-amber-500/20 whitespace-nowrap backdrop-blur-md text-right">
-                                <span class="text-[10px] text-amber-400 font-mono block">VARIABLE_02</span>
-                                <span class="text-xs text-white font-bold">Demographics</span>
+                        <!-- The "Map" (Cartogram Grid) -->
+                        <div class="relative mt-2">
+                            <!-- Label (Moved Higher) -->
+                            <div class="absolute -top-5 left-0 text-[10px] text-slate-500 font-mono bg-slate-900 px-1">KEY DISTRICTS</div>
+                            
+                            <!-- Grid (Pushed Lower with mt-6) -->
+                            <div class="grid grid-cols-6 gap-1.5 h-32 opacity-90 mt-6">
+                                <!-- 
+                                     Classes: 
+                                     'bg-purple-600' (Win/Client)
+                                     'bg-yellow-500' (Loss/Opponent) - Reduced opacity for losing visual
+                                     'bg-slate-800' (Pending)
+                                -->
+                                <div class="bg-purple-600 rounded-sm animate-[ping_1s_ease-out_reverse]"></div> <div class="bg-purple-600 rounded-sm"></div> <div class="bg-purple-600 rounded-sm"></div> <div class="bg-yellow-500 rounded-sm opacity-40"></div> <div class="bg-yellow-500 rounded-sm opacity-40"></div> <div class="bg-slate-800 rounded-sm"></div>
+                                <div class="bg-purple-600 rounded-sm"></div> <div class="bg-purple-600 rounded-sm shadow-[0_0_10px_#9333ea]"></div> <div class="bg-purple-600 rounded-sm"></div> <div class="bg-purple-600 rounded-sm"></div> <div class="bg-yellow-500 rounded-sm opacity-40"></div> <div class="bg-yellow-500 rounded-sm opacity-40"></div>
+                                <div class="bg-purple-600 rounded-sm"></div> <div class="bg-purple-600 rounded-sm"></div> <div class="bg-purple-600 rounded-sm"></div> <div class="bg-slate-800 rounded-sm"></div> <div class="bg-slate-800 rounded-sm"></div> <div class="bg-yellow-500 rounded-sm opacity-40"></div>
+                                <div class="bg-purple-600 rounded-sm"></div> <div class="bg-purple-600 rounded-sm"></div> <div class="bg-yellow-500 rounded-sm opacity-40"></div> <div class="bg-yellow-500 rounded-sm opacity-40"></div> <div class="bg-slate-800 rounded-sm"></div> <div class="bg-slate-800 rounded-sm"></div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Node 3: Bottom Left (Sentiment) -->
-                    <div class="absolute bottom-[20%] left-[20%] z-10 animate-[bounce_6s_infinite]" style="animation-delay: 0.5s;">
-                        <div class="relative group">
-                             <div class="w-3 h-3 bg-amber-400 rounded-full shadow-[0_0_15px_#fbbf24]"></div>
-                             <div class="absolute left-6 top-1/2 -translate-y-1/2 bg-slate-800/90 px-3 py-1 rounded border border-amber-500/20 whitespace-nowrap backdrop-blur-md">
-                                <span class="text-[10px] text-amber-400 font-mono block">VARIABLE_03</span>
-                                <span class="text-xs text-white font-bold">Sentiment Score</span>
-                            </div>
+                    <!-- 3. The "PROJECTED WINNER" Overlay (Animation) -->
+                    <!-- This slides up after a delay -->
+                    <div class="absolute bottom-4 left-4 right-4 bg-white text-slate-900 p-3 rounded shadow-2xl transform translate-y-[150%] animate-[slideUp_0.5s_ease-out_1s_forwards] flex items-center gap-3 border-l-8 border-purple-600 z-30">
+                        <div class="bg-purple-600 text-white rounded-full p-1">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                        </div>
+                        <div>
+                            <div class="text-[10px] font-black tracking-widest text-slate-500 uppercase">Projection</div>
+                            <div class="text-lg font-black leading-none text-purple-900">CLIENT VICTORY</div>
                         </div>
                     </div>
 
-                     <!-- Node 4: Bottom Right (R Studio) -->
-                    <div class="absolute bottom-[25%] right-[20%] z-10 animate-[bounce_4.5s_infinite]" style="animation-delay: 2s;">
-                         <div class="flex flex-col items-center gap-2">
-                             <div class="w-12 h-12 rounded-xl bg-[#1e1e1e] border border-amber-500/30 flex items-center justify-center shadow-xl">
-                                <span class="font-bold text-white text-lg">R</span>
-                             </div>
-                             <div class="text-[10px] text-amber-500/80 font-mono bg-black/50 px-2 rounded">model.R</div>
-                         </div>
-                    </div>
+                    <!-- Scanlines / TV Effect -->
+                    <div class="absolute inset-0 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] z-10 bg-[length:100%_2px,3px_100%] pointer-events-none opacity-20"></div>
 
+                    <style>
+                        @keyframes slideUp {
+                            to { transform: translateY(0); }
+                        }
+                    </style>
                 </div>
               `
             },
